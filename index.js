@@ -114,6 +114,7 @@ export default class SlidingPanel extends Component {
                 {
                   toValue: Platform.OS === 'android' ? height-this.props.headerLayoutHeight - 25 : height-this.props.headerLayoutHeight,
                   duration: this.props.AnimationSpeed,
+                  useNativeDriver: false,
                 }
               ).start(() => this.props.onAnimationStop());
             }
@@ -125,6 +126,7 @@ export default class SlidingPanel extends Component {
                 {
                   toValue: 0,
                   duration: this.props.AnimationSpeed,
+                  useNativeDriver: false,
                 }
               ).start(() => this.props.onAnimationStop()); 
             }
@@ -137,6 +139,7 @@ export default class SlidingPanel extends Component {
               {
                 toValue: 0,
                 duration: this.props.AnimationSpeed,
+                useNativeDriver: false,
               }
             ).start(() => this.props.onAnimationStop());
           }
@@ -163,6 +166,7 @@ export default class SlidingPanel extends Component {
       {
         toValue: Platform.OS === 'android' ? height-this.props.headerLayoutHeight - 25 : height-this.props.headerLayoutHeight,
         duration: this.props.AnimationSpeed,
+        useNativeDriver: false,
       }
     ).start();
   }
