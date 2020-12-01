@@ -38,10 +38,10 @@ const SlidingPanelIOS = (props) => (
     <Animated.View
             {...props.panResponder} style={{height: props.headerPanelHeight,}}>   
       {props.headerView()}
+    </Animated.View>  
      <View style={props.panelPosition === 'bottom' ? {top: props.headerPanelHeight, left: 0, position: 'absolute',} : {bottom: props.headerPanelHeight, left: 0, position: 'absolute',}}>
       {props.slidingPanelView()}
     </View>
-    </Animated.View>  
   </Animated.View>
 );
 
